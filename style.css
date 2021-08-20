@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* Общие правила */
+body {
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Шапка */
+.header-conteiner {
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 calc((100vw - 1210px)/2);
+    box-shadow: 0 3px 7px rgb(204, 204, 204);
+}
+.header-flex {
+    max-width: 1210px;
+    padding: 0 20px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header__search-form-375 {
+    display: none;
+}
+/* Шапка: Отступы */
+.box {
+    margin-right: 5.13%;
+}
+.box:nth-child(3n){
+    margin-right: 0;
+    border-left: 1px solid black;
+}
+.box:nth-child(4n){
+    margin-left: 10px;
+    margin-right: 0;
+}
+/* Шапка: флекс-блок LOGO */
+.header-flex__logo {
+    line-height: 0;
+    min-width: 135px;
+    min-height: 30px;
+}
+.logoQ {
+    width: 100%;
+}
+/* Шапка: флекс-блок Формы поиска */
+.header-flex__search-form {
+    width: 763px;
+}
+.search-form {
+    background-image: url(Images/Ellipse.png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    width: 100%;
+    height: 40px;
+    padding-left: 35px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid rgb(221, 221, 221);
+}
+.search-form::placeholder {
+    color:rgb(179, 179, 179);
+}
+/* Шапка: флекс-блок никнейма */
+.header-flex__nick-name {
+    height: 80px;
+    max-width: 100px;
+    padding-left: 19px;
+    display: flex;
+    align-items: center;
+}
+/* Шапка: флекс-блок аватара */
+.header-flex__avatar {
+    line-height: 0;
+}
+.header-flex__avatar375 {
+    display:none;
+}
+
+@media (min-width: 375.5px) and (max-width: 445px) {
+    .header-flex__nick-name {
+        padding-left: 5px;
+    }
+    .search-form {
+        background-position: 2px 10px;
+        padding-left: 19px;
+    }
+}
+
+/* Основа + карточки */
+.main-conteiner {
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0 calc((100vw - 1210px)/2);
+}
+.main-conteiner_indent {
+    padding: 0 20px;
+}
+.main__our-partners {
+    width: 100%;
+    line-height: 58px;
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+}
+.main__cards-flex {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    --gap:30px;
+    --count: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--gap);
+    margin-bottom: var(--gap);
+    width: calc((100% / var(--count)) - ((var(--count) - 1) * var(--gap) / var(--count)));
+    height: 120px;
+    border: 1px solid black;
+}
+.card:nth-child(4n) {
+    margin-right: 0;
+}
+.card:hover {
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0 0 15px 3px rgb(153, 153, 153);
+    border: 0;
+}
+.logo-partners {
+    height: auto;
+    max-width: 88%;
+    min-width: 0;
+}
+.nike {
+    width: 65%;
+}
+
+@media (min-width: 375.5px) and (max-width: 768px) {
+    .main__our-partners {
+        line-height: 48px;
+        font-size: 28px;
+    }
+    .card {
+      --gap: 20px;
+      --count: 3;
+    }
+    .card:nth-child(3n) {
+      margin-right: 0;
+    }
+    .card:nth-child(4n) {
+      margin-right: var(--gap);
+    }
+  }
+  @media (min-width: 0) and (max-width: 375px) {
+    .main__our-partners {
+        line-height: 48px;
+        font-size: 28px;
+    }
+    .main__our-partners {
+        line-height: 45px;
+        font-size: 28px;
+    }   
+    .card {
+      --gap: 20px;
+      --count: 1;
+      margin-right: 0;
+    }
+    .card:last-child {
+        margin-bottom: 0;
+    }
+    .Henkel {
+        width: 48%;
+    }
+    .McD {
+        width: 38%;
+    }
+    .header__search-form-375 {
+        display:block;
+        width: 100vw;
+    }
+    .search-form {
+        border: 0;
+        border-top: 1px solid rgb(221, 221, 221);
+        border-radius: 0;
+    }
+    .header-flex__search-form {
+        display: none;
+    }
+    .header-flex__nick-name {
+        height: 80px;
+        max-width: 100px;
+        padding-left: 19px;
+        display: none;
+        align-items: center;
+    }
+    .header-flex__avatar {
+        display: none;
+        line-height: 0;
+    }
+    .header-flex__avatar375 {
+        padding: 22px 0 16px 0;
+        flex-grow: 1;
+        text-align: right;
+        display:block;
+    }
+  }
